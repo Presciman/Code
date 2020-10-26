@@ -1,0 +1,13 @@
+Global dims = 512 512 512
+Grid dims = 4 4 2
+Automatic rank determination = true
+SV Threshold = 1e-9
+Input file list = raw.txt
+Perform STHOSVD = true
+Write STHOSVD result = true
+STHOSVD directory = compressed
+STHOSVD file prefix = sthosvd
+SV directory = .
+SV file prefix = sv
+Timing file = runtime.csv
+Print options = true
