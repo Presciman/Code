@@ -1,0 +1,6 @@
+ function runAll()
+ |
+{Error: Function definition not supported in this context. Create functions in
+code file.
+} 
+slurmstepd: error: *** JOB 1846145 ON c104-064 CANCELLED AT 2020-10-28T20:41:28 DUE TO TIME LIMIT ***

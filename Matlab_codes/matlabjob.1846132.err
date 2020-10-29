@@ -1,0 +1,9 @@
+ function runAll()
+ |
+{Error: Function definition not supported in this context. Create functions in
+code file.
+} 
+ end
+ |
+{Error: Illegal use of reserved keyword "end".
+} 

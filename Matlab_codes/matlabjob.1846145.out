@@ -1,0 +1,136 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2020 The MathWorks, Inc.
+                  R2020a (9.8.0.1323502) 64-bit (glnxa64)
+                             February 25, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+>> >> >> >> >> >> >> >> >> >> >> Reading tensor finished!
+>> The core size is: 
+   342   293   146
+
+The error is: 
+    0.2104
+
+The core size is: 
+   472   453   179
+
+The error is: 
+    0.2915
+
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.094990e-17.] 
+[> In btd_core>@(r,n)inv(UHU{r,n,r}) (line 181)
+  In btd_core/state (line 180)
+  In btd_core/grad (line 237)
+  In nls_gndl (line 369)
+  In btd_core (line 148)
+  In btd_nls (line 40)
+  In main (line 13)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.709776e-17.] 
+[> In btd_core>@(r,n)inv(UHU{r,n,r}) (line 181)
+  In btd_core/state (line 180)
+  In btd_core/grad (line 237)
+  In nls_gndl (line 369)
+  In btd_core (line 148)
+  In btd_nls (line 40)
+  In main (line 13)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  8.358462e-17.] 
+[> In btd_core>@(r,n)inv(UHU{r,n,r}) (line 181)
+  In btd_core/state (line 180)
+  In btd_core/grad (line 237)
+  In nls_gndl (line 369)
+  In btd_core (line 148)
+  In btd_nls (line 40)
+  In main (line 13)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  3.207750e-17.] 
+[> In btd_core>@(r,n)inv(UHU{r,n,r}) (line 181)
+  In btd_core/state (line 180)
+  In btd_core/grad (line 237)
+  In nls_gndl (line 369)
+  In btd_core (line 148)
+  In btd_nls (line 40)
+  In main (line 13)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.682349e-16.] 
+[> In btd_core>@(r,n)inv(UHU{r,n,r}) (line 181)
+  In btd_core/state (line 180)
+  In btd_core/grad (line 237)
+  In nls_gndl (line 369)
+  In btd_core (line 148)
+  In btd_nls (line 40)
+  In main (line 13)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.751326e-16.] 
+[> In btd_core>@(r,n)inv(UHU{r,n,r}) (line 181)
+  In btd_core/state (line 180)
+  In btd_core/grad (line 237)
+  In nls_gndl (line 369)
+  In btd_core (line 148)
+  In btd_nls (line 40)
+  In main (line 13)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.944547e-17.] 
+[> In btd_core>@(r,n)inv(UHU{r,n,r}) (line 181)
+  In btd_core/state (line 180)
+  In btd_core/grad (line 237)
+  In nls_gndl (line 369)
+  In btd_core (line 148)
+  In btd_nls (line 40)
+  In main (line 13)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  9.052700e-17.] 
+[> In btd_core>@(r,n)inv(UHU{r,n,r}) (line 181)
+  In btd_core/state (line 180)
+  In btd_core/grad (line 237)
+  In nls_gndl (line 369)
+  In btd_core (line 148)
+  In btd_nls (line 40)
+  In main (line 13)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.638895e-16.] 
+[> In btd_core>@(r,n)inv(UHU{r,n,r}) (line 181)
+  In btd_core/state (line 180)
+  In btd_core/grad (line 237)
+  In nls_gndl (line 369)
+  In btd_core (line 148)
+  In btd_nls (line 40)
+  In main (line 13)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  2.752014e-17.] 
+[> In btd_core>@(r,n)inv(UHU{r,n,r}) (line 181)
+  In btd_core/state (line 180)
+  In btd_core/grad (line 237)
+  In nls_gndl (line 369)
+  In btd_core (line 148)
+  In btd_nls (line 40)
+  In main (line 13)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  7.321647e-17.] 
+[> In btd_core>@(r,n)inv(UHU{r,n,r}) (line 181)
+  In btd_core/state (line 180)
+  In btd_core/grad (line 237)
+  In nls_gndl (line 369)
+  In btd_core (line 148)
+  In btd_nls (line 40)
+  In main (line 13)
+] 
+[Warning: Matrix is close to singular or badly scaled. Results may be
+inaccurate. RCOND =  1.610611e-16.] 
+[> In btd_core>@(r,n)inv
