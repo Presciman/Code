@@ -1,0 +1,172 @@
+The global dimensions of the tensor to be scaled or compressed
+- Global dims = 512 512 512 
+
+The global dimensions of the processor grid
+- Grid dims = 4 2 2 
+
+If true, automatically determine rank; otherwise, use the user-defined ranks
+- Automatic rank determination = true
+
+Used for automatic rank determination; the desired error rate
+- SV Threshold = 0.01
+
+List of filenames of raw data to be read
+- Input file list = raw.txt
+
+How to scale the tensor
+- Scaling type = None
+
+Which mode's hyperslices will be scaled
+- Scale mode = 2
+
+Threshold for standard deviation before we simply set it to 1
+Used in StandardCentering scaling
+- STD Threshold = 1e-09
+
+If true, perform ST-HOSVD
+- Perform STHOSVD = true
+
+If true, use the old Gram algorithm; otherwise use the new one
+- Use old Gram = false
+
+Location of statistics file containing min, max, mean, and std of each hyperslice
+- Stats file = stats.txt
+
+If true, write the preprocessed data to a file
+- Write preprocessed data = false
+
+File containing a list of filenames to output the scaled data into
+- Preprocessed output file list = pre.txt
+
+If true, record the result of ST-HOSVD (the core tensor and all factors
+- Write STHOSVD result = true
+
+Directory location of ST-HOSVD output files
+NOTE: Please ensure that this directory actually exists!
+- STHOSVD directory = compressed_baryon_density
+
+Base name of ST-HOSVD output files
+- STHOSVD file prefix = sthosvd
+
+Directory to place singular value files into
+NOTE: Please ensure that this directory actually exists!
+- SV directory = .
+
+Base name for writing the singular value files
+- SV file prefix = sv
+
+Name of the CSV file holding the timing results
+- Timing file = runtime.csv
+
+If true, reconstruct an approximation of the original tensor after ST-HOSVD
+- Reconstruct tensor = false
+
+If true, print the parameters
+- Print options = true
+
+
+Creating process grid
+Reading file /home1/07827/sunbaixi/data/512x512x512/baryon_density.dat
+Time to read tensor: 1.16549 s
+Local input tensor size: 128 256 256 , or 67.109 MB
+Global input tensor size: 512 512 512 , or 1.0737 GB
+Writing file stats.txt
+Not scaling the tensor
+Time to preprocess: 0.0025908
+	AutoST-HOSVD::Tensor Norm: 1.9879e+38...
+	AutoST-HOSVD::Relative Threshold: 1.3172e+72...
+	AutoST-HOSVD::Starting Gram(0)...
+		Gram(0)::Local Matmul time: 0.12037s
+		Gram(0)::Pack time: 0s
+		Gram(0)::All-to-all time: 0.043606s
+		Gram(0)::Unpack time: 0.045646s
+		Gram(0)::All-reduce time: 0.036255s
+	AutoST-HOSVD::Gram(0) time: 0.24993s
+	AutoST-HOSVD::Starting Evecs(0)...
+	AutoST-HOSVD::EVECS(0) time: 0.072613s
+		Evecs(0)::Local EV time: 0.072613s
+	AutoST-HOSVD::Starting TTM(0)...
+	AutoST-HOSVD::TTM(0) time: 0.020072s
+Local tensor size after STHOSVD iteration 0: 1 256 256 , or 524.29 KB
+Global tensor size after STHOSVD iteration 0: 2 512 512 , or 4.1943 MB
+	AutoST-HOSVD::Starting Gram(1)...
+		Gram(1)::Local Matmul time: 0.0007116s
+		Gram(1)::Pack time: 0.00088565s
+		Gram(1)::All-to-all time: 0.00011596s
+		Gram(1)::Unpack time: 3.8933e-05s
+		Gram(1)::All-reduce time: 0.0041475s
+	AutoST-HOSVD::Gram(1) time: 0.0059923s
+	AutoST-HOSVD::Starting Evecs(1)...
+	AutoST-HOSVD::EVECS(1) time: 0.037342s
+		Evecs(1)::Local EV time: 0.037342s
+	AutoST-HOSVD::Starting TTM(1)...
+	AutoST-HOSVD::TTM(1) time: 0.0051538s
+Local tensor size after STHOSVD iteration 1: 1 1 256 , or 2.048 KB
+Global tensor size after STHOSVD iteration 1: 2 2 512 , or 16.384 KB
+	AutoST-HOSVD::Starting Gram(2)...
+		Gram(2)::Local Matmul time: 0.00020407s
+		Gram(2)::Pack time: 1.5652e-05s
+		Gram(2)::All-to-all time: 4e-06s
+		Gram(2)::Unpack time: 0s
+		Gram(2)::All-reduce time: 0.0042556s
+	AutoST-HOSVD::Gram(2) time: 0.0045637s
+	AutoST-HOSVD::Starting Evecs(2)...
+	AutoST-HOSVD::EVECS(2) time: 0.037822s
+		Evecs(2)::Local EV time: 0.037822s
+	AutoST-HOSVD::Starting TTM(2)...
+	AutoST-HOSVD::TTM(2) time: 0.0048837s
+Local tensor size after STHOSVD iteration 2: 1 1 1 , or 8 bytes
+Global tensor size after STHOSVD iteration 2: 2 2 2 , or 64 bytes
+
+
+           Timing results for 16 MPI processes
+Timer             Min          Max          Mean
+--------------------------------------------------------
+Gram(0)         : 2.49816e-01 2.49932e-01 2.49848e-01
+ local multiply : 1.14850e-01 1.52498e-01 1.22756e-01
+ all-reduce     : 4.07714e-03 4.21239e-02 3.42579e-02
+ all-to-all     : 4.27277e-02 4.45093e-02 4.36660e-02
+ unpacking      : 4.40038e-02 4.59386e-02 4.51153e-02
+Eigensolve(0)   : 7.26132e-02 7.51019e-02 7.29855e-02
+TTM(0)          : 1.74345e-02 2.00724e-02 1.94872e-02
+ local multiply : 7.79662e-03 8.41567e-03 8.04963e-03
+ packing        : 4.85991e-03 5.17275e-03 4.98716e-03
+ reduce-scatter : 1.16671e-03 1.91888e-03 1.53878e-03
+
+Gram(1)         : 5.99230e-03 6.74084e-03 6.36448e-03
+ local multiply : 0.00000e+00 7.12012e-04 3.44511e-04
+ all-reduce     : 4.14755e-03 6.02413e-03 5.07325e-03
+ packing        : 0.00000e+00 9.82197e-04 4.46637e-04
+ all-to-all     : 0.00000e+00 5.76596e-04 1.09501e-04
+ unpacking      : 0.00000e+00 3.89330e-05 1.58747e-05
+Eigensolve(1)   : 3.64227e-02 4.14537e-02 3.94743e-02
+TTM(1)          : 3.79268e-04 5.40522e-03 2.75795e-03
+ local multiply : 0.00000e+00 1.08182e-04 4.85703e-05
+ packing        : 4.88000e-07 1.77150e-05 8.86437e-06
+ reduce-scatter : 4.38000e-07 5.41782e-04 2.65167e-04
+
+Gram(2)         : 4.51616e-03 5.41535e-03 4.95669e-03
+ local multiply : 0.00000e+00 2.23272e-04 4.99676e-05
+ all-reduce     : 3.69676e-03 4.67200e-03 4.30913e-03
+ packing        : 0.00000e+00 1.56520e-05 7.28731e-06
+ all-to-all     : 0.00000e+00 7.33590e-05 9.64369e-06
+Eigensolve(2)   : 3.67668e-02 4.22942e-02 4.01960e-02
+TTM(2)          : 3.69903e-04 5.86233e-03 2.54799e-03
+ local multiply : 0.00000e+00 5.08500e-06 2.19062e-06
+ packing        : 4.01000e-07 7.58000e-07 5.17313e-07
+ reduce-scatter : 4.46000e-07 5.31100e-06 2.14481e-06
+
+Total           : 4.38619e-01 4.38879e-01 4.38732e-01
+
+Writing eigenvalues to ./sv_mode_0.txt
+Writing eigenvalues to ./sv_mode_1.txt
+Writing eigenvalues to ./sv_mode_2.txt
+Norm of input tensor: 1.98786e+38
+Norm of core tensor: 1.98786e+38
+Error bound: 2.94278e-03
+Writing file compressed_baryon_density/sthosvd_core.mpi
+Writing file compressed_baryon_density/sthosvd_mat_0.mpi
+Writing file compressed_baryon_density/sthosvd_mat_1.mpi
+Writing file compressed_baryon_density/sthosvd_mat_2.mpi
+Time to write factorization: 2.45277e-02 s
+Maximum local memory usage: 2.01354e+02 MB

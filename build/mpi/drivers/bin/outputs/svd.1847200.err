@@ -1,0 +1,23 @@
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Failed to open scaling and shifting file: compressed_baryon_density/sthosvd_scale.txt
+Assuming no scaling and shifting was performed
+Error: Could not write to file reconstructed1e-9.mpi
+slurmstepd: error: *** JOB 1847200 ON c170-191 CANCELLED AT 2020-10-28T21:21:04 ***

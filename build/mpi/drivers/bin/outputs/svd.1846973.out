@@ -1,0 +1,110 @@
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /home1/07827/sunbaixi/anaconda3
+
+  added / updated specs:
+    - openmpi
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    conda-4.9.0                |   py38h924ce5b_1         3.1 MB  conda-forge
+    openmpi-4.0.5              |       hdf1f1ad_1         3.9 MB  conda-forge
+    python_abi-3.8             |           1_cp38           4 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:         7.0 MB
+
+The following NEW packages will be INSTALLED:
+
+  mpi                conda-forge/linux-64::mpi-1.0-openmpi
+  openmpi            conda-forge/linux-64::openmpi-4.0.5-hdf1f1ad_1
+  python_abi         conda-forge/linux-64::python_abi-3.8-1_cp38
+
+The following packages will be UPDATED:
+
+  conda                       pkgs/main::conda-4.8.3-py38_0 --> conda-forge::conda-4.9.0-py38h924ce5b_1
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages
+python_abi-3.8       | 4 KB      |            |   0% python_abi-3.8       | 4 KB      | ########## | 100% 
+conda-4.9.0          | 3.1 MB    |            |   0% conda-4.9.0          | 3.1 MB    | 3          |   3% conda-4.9.0          | 3.1 MB    | ##4        |  24% conda-4.9.0          | 3.1 MB    | ########## | 100% 
+openmpi-4.0.5        | 3.9 MB    |            |   0% openmpi-4.0.5        | 3.9 MB    | ####6      |  47% openmpi-4.0.5        | 3.9 MB    | ########## | 100% 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... b' \nFor Linux 64, Open MPI is built with CUDA awareness but this support is disabled by default.\nTo enable it, please set the environmental variable OMPI_MCA_opal_cuda_support=true before\nlaunching your MPI processes. Equivalently, you can set the MCA parameter in the command line:\nmpiexec --mca opal_cuda_support 1 ...\n \n'
+done
+The global dimensions of the tensor to be scaled or compressed
+- Global dims = 512 512 512 
+
+The global dimensions of the processor grid
+- Grid dims = 4 4 2 
+
+If true, automatically determine rank; otherwise, use the user-defined ranks
+- Automatic rank determination = true
+
+Used for automatic rank determination; the desired error rate
+- SV Threshold = 0.01
+
+List of filenames of raw data to be read
+- Input file list = raw.txt
+
+How to scale the tensor
+- Scaling type = None
+
+Which mode's hyperslices will be scaled
+- Scale mode = 2
+
+Threshold for standard deviation before we simply set it to 1
+Used in StandardCentering scaling
+- STD Threshold = 1e-09
+
+If true, perform ST-HOSVD
+- Perform STHOSVD = true
+
+If true, use the old Gram algorithm; otherwise use the new one
+- Use old Gram = false
+
+Location of statistics file containing min, max, mean, and std of each hyperslice
+- Stats file = stats.txt
+
+If true, write the preprocessed data to a file
+- Write preprocessed data = false
+
+File containing a list of filenames to output the scaled data into
+- Preprocessed output file list = pre.txt
+
+If true, record the result of ST-HOSVD (the core tensor and all factors
+- Write STHOSVD result = true
+
+Directory location of ST-HOSVD output files
+NOTE: Please ensure that this directory actually exists!
+- STHOSVD directory = compressed_baryon_density
+
+Base name of ST-HOSVD output files
+- STHOSVD file prefix = sthosvd
+
+Directory to place singular value files into
+NOTE: Please ensure that this directory actually exists!
+- SV directory = .
+
+Base name for writing the singular value files
+- SV file prefix = sv
+
+Name of the CSV file holding the timing results
+- Timing file = runtime.csv
+
+If true, reconstruct an approximation of the original tensor after ST-HOSVD
+- Reconstruct tensor = false
+
+If true, print the parameters
+- Print options = true
+
+
+Processor grid dimensions: 4 4 2 

@@ -1,0 +1,18 @@
+Reading file compressed_baryon_density/sthosvd_core.mpi
+Local core tensor size: 1 2 2 , or 32 bytes
+Global core tensor size: 3 3 3 , or 216 bytes
+Reading file compressed_baryon_density/sthosvd_mat_0.mpi
+Reading file compressed_baryon_density/sthosvd_mat_1.mpi
+Reading file compressed_baryon_density/sthosvd_mat_2.mpi
+Reconstruction order: 0 1 2 
+Local tensor size after reconstruction iteration 0: 128 2 2 , or 4.096 KB
+Global tensor size after reconstruction iteration 0: 512 3 3 , or 36.864 KB
+Norm: 3.9516e+76
+Local tensor size after reconstruction iteration 1: 128 256 2 , or 524.29 KB
+Global tensor size after reconstruction iteration 1: 512 512 3 , or 6.2915 MB
+Norm: 3.9516e+76
+Local tensor size after reconstruction iteration 2: 128 256 256 , or 67.109 MB
+Global tensor size after reconstruction iteration 2: 512 512 512 , or 1.0737 GB
+Norm: 3.9516e+76
+Writing file reconstructed1e-3.mpi
+Maximum local memory usage: 134.78 MB
